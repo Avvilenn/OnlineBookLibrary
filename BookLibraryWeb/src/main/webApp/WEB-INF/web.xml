@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.1" xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_1.xsd">
+
+    <servlet>
+        <servlet-name>ServletAllBooks</servlet-name>
+        <servlet-class>servlets.ServletAllBooks</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletAllBooks</servlet-name>
+        <url-pattern>/allbooks</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletDownload</servlet-name>
+        <servlet-class>servlets.ServletDownload</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletDownload</servlet-name>
+        <url-pattern>/download</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+    <servlet-name>ServletAddBook</servlet-name>
+    <servlet-class>servlets.ServletAddBook</servlet-class>
+</servlet>
+    <servlet-mapping>
+        <servlet-name>ServletAddBook</servlet-name>
+        <url-pattern>/addbook</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletSearchAuthor</servlet-name>
+        <servlet-class>servlets.ServletSearchAuthor</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletSearchAuthor</servlet-name>
+        <url-pattern>/searchauthor</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletSearchAuthorTitle </servlet-name>
+        <servlet-class>servlets.ServletSearchAuthorTitle </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletSearchAuthorTitle </servlet-name>
+        <url-pattern>/searchauthortitle</url-pattern>
+        </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SearchRandomWords </servlet-name>
+        <servlet-class>servlets.SearchRandomWords</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchRandomWords</servlet-name>
+        <url-pattern>/searchdescription</url-pattern>
+    </servlet-mapping>
+
+
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+
+    <resource-ref>
+        <description>DB Connection</description>
+        <res-ref-name>jdbc/CarDS</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
+
+</web-app>
