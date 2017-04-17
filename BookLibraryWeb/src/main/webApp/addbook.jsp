@@ -60,7 +60,7 @@
               </div>
                <div class="form-group">
                    <label for="exampleInputImage">Add cover image of book </label>
-                    <input type="file" id="exampleInputImage" multiple accept="image/*,image/jpeg" name="coverImage" value="${book.coverImage}" required>
+                    <input type="file" id="exampleInputImage" name="coverImage" value="${book.coverImage}" required>
                     <p class="help-block">Add jpeg or another .* </p>
            </div>
 

@@ -10,6 +10,7 @@ CREATE TABLE books
  shortDescription TEXT,
  coverImage MEDIUMBLOB,
  host INT,
+ book_file LONGBLOB,
  count_of_downloads INT
  );
   CREATE TABLE books_host1
